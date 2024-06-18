@@ -22,8 +22,6 @@ services:
       - '8000:8000'
     volumes:
       - ./backend:/app
-    env_file:
-      - ./backend/.env
     command: uvicorn mysaas.asgi:application --host 0.0.0.0 --reload
     depends_on:
       - postgres
