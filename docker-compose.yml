@@ -33,8 +33,6 @@ services:
     image: backend:latest
     ports:
       - '8001:8000'
-    env_file:
-      - ./backend/.env
     volumes:
       - ./backend:/app
     command: uvicorn mysaas.asgi:fastapp  --host 0.0.0.0 --reload
